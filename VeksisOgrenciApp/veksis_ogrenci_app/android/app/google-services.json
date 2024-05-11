@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "837624027822",
+    "project_id": "veksis-ogrenci-db",
+    "storage_bucket": "veksis-ogrenci-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837624027822:android:091285d46c433bedf46b3f",
+        "android_client_info": {
+          "package_name": "com.example.veksis_ogrenci_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDErsHGNHZmkRDkJrzR3wWP-rY2h9DwqMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
