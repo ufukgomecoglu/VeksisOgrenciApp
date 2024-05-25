@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:veksis_ogrenci_app/firebase_options.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:veksis_ogrenci_app/pages/account_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: <String, WidgetBuilder>{
+        '/accountPage': (context) => const AccountPage(title: 'Hesabım'),
+      },
     );
   }
 }
@@ -49,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: HexColor('#8EF9F3'),
+        backgroundColor: HexColor('#7C89A1'),
         title: Image.asset(
           'assets/images/VeksisLogo.jpeg',
           fit: BoxFit.cover,
@@ -58,10 +62,10 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).push(_createRoute());
+              Navigator.of(context).push(_createAccountRoute());
             },
             icon: const Icon(Icons.account_circle),
-            color: HexColor('#8377D1'),
+            color: HexColor('#F2F2F2'),
             iconSize: 40,
           )
         ],
@@ -89,9 +93,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-Route _createRoute() {
+Route _createAccountRoute() {
   return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => const ProfilPage(),
+    transitionDuration: const Duration(milliseconds: 500),
+    pageBuilder: (context, animation, secondaryAnimation) => const AccountPage(
+      title: 'Hesabım',
+    ),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(0.0, 1.0);
       const end = Offset.zero;
@@ -105,18 +112,4 @@ Route _createRoute() {
       );
     },
   );
-}
-
-class ProfilPage extends StatelessWidget {
-  const ProfilPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: const Center(
-        child: Text('Page 2'),
-      ),
-    );
-  }
 }
