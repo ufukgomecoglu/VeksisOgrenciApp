@@ -37,6 +37,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_core: ^2.27.0
   hexcolor: ^3.0.1
+  firebase_auth: ^4.17.8
+  cloud_firestore: ^4.15.8
+  uuid: ^4.4.0
+  fluttertoast: ^8.2.5
+  fixnum: ^1.1.0
+  regexpattern: ^2.6.0
 
 dev_dependencies:
   flutter_test:

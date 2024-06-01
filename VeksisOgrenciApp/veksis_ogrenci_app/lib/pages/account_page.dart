@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:veksis_ogrenci_app/pages/deneme.dart';
+import 'package:veksis_ogrenci_app/pages/register_page.dart';
+import 'package:veksis_ogrenci_app/pages/student_login_page.dart';
 
 class AccountPage extends StatelessWidget {
   const AccountPage({super.key, required this.title});
@@ -63,7 +66,10 @@ Widget content(BuildContext context) {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    //fsdfs
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const StudentLoginPage(
+                              title: "Öğrenci Giriş",
+                            )));
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size(300, 50),
@@ -79,7 +85,10 @@ Widget content(BuildContext context) {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    //fsdfs
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const MyApp(
+                              title: "Öğrenci Giriş",
+                            )));
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size(300, 50),
@@ -95,7 +104,10 @@ Widget content(BuildContext context) {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    //fsdfs
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const RegisterPage(
+                              title: "Öğrenci Giriş",
+                            )));
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size(300, 50),
